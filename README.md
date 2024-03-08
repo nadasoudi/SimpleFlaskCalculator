@@ -25,5 +25,7 @@ To run the project locally:
 3. Run the Flask application: `python app.py`
 4. Access the calculator at `http://localhost:5000` in your web browser.
 
+[How it works ](https://www.youtube.com/watch?v=wQzF0THjdmE&ab_channel=Nada)
+
 
 
