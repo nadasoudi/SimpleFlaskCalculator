@@ -5,7 +5,7 @@ This is a simple calculator web application built with Flask as a backend , HTML
 ## Project Overview
 
 The project provides a basic web interface for performing mathematical calculations. It uses a Flask backend to handle user input, evaluate expressions, and display results.
-![Example Image]()
+![Example Image](https://github.com/nadasoudi/SimpleFlaskCalculator/blob/main/Scalc.JPG)
 
 
 ## Usage
