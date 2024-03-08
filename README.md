@@ -9,6 +9,7 @@ The project provides a basic web interface for performing mathematical calculati
 
 
 ## Usage
+[How it works ](https://www.youtube.com/watch?v=wQzF0THjdmE&ab_channel=Nada)
 
 1. Input a mathematical expression in the provided text field.
 2. Click the corresponding buttons to append numbers and operators to the expression.
@@ -25,7 +26,7 @@ To run the project locally:
 3. Run the Flask application: `python app.py`
 4. Access the calculator at `http://localhost:5000` in your web browser.
 
-[How it works ](https://www.youtube.com/watch?v=wQzF0THjdmE&ab_channel=Nada)
+
 
 
 
