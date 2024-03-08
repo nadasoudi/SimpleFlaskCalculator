@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 70px;
+            height: 50px;
+            font-size: 18px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .first-color {
+            background: #ffcbcb;
+        }
+        .second-color {
+            background: #ffb5b5;
+        }
+        .third-color {
+            background: #407088;
+        }
+        .fourth-color {
+            background: #132743;
+        }
+    </style>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <form action="/calculate" method="POST">
+            <input type="text" name="expression" value="{{ expression }}" readonly>
+            <br>
+            <div class="button-row">
+                <button class="first-color" type="button" onclick="appendCharacter('1')">1</button>
+                <button class="first-color" type="button" onclick="appendCharacter('2')">2</button>
+                <button class="first-color" type="button" onclick="appendCharacter('3')">3</button>
+                <button class="second-color" type="button" onclick="appendCharacter('+')">+</button>
+            </div>
+            <div class="button-row">
+                <button class="first-color" type="button" onclick="appendCharacter('4')">4</button>
+                <button class="first-color" type="button" onclick="appendCharacter('5')">5</button>
+                <button class="first-color" type="button" onclick="appendCharacter('6')">6</button>
+                <button class="second-color" type="button" onclick="appendCharacter('-')">-</button>
+            </div>
+            <div class="button-row">
+                <button class="first-color" type="button" onclick="appendCharacter('7')">7</button>
+                <button class="first-color" type="button" onclick="appendCharacter('8')">8</button>
+                <button class="first-color" type="button" onclick="appendCharacter('9')">9</button>
+                <button class="second-color" type="button" onclick="appendCharacter('*')">*</button>
+            </div>
+            <div class="button-row">
+                <button class="first-color" type="button" onclick="appendCharacter('0')">0</button>
+                <button class="first-color" type="button" onclick="appendCharacter('.')">.</button>
+                <button class="first-color" type="button" onclick="clearInput()">C</button>
+                <button class="second-color" type="button" onclick="appendCharacter('/')">/</button>
+            </div>
+            <br>
+            <button class="third-color" type="submit" style="width: 100%;">=</button>
+        </form>
+        {% if result %}
+        <br>
+        <p>Result: {{ result }}</p>
+        {% endif %}
+    </div>
+    <script>
+        function appendCharacter(character) {
+            var expressionInput = document.querySelector('input[name="expression"]');
+            expressionInput.value += character;
+        }
+
+        function clearInput() {
+            var expressionInput = document.querySelector('input[name="expression"]');
+            expressionInput.value = '';
+        }
+    </script>
+</body>
+</html>
